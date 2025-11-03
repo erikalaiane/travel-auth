@@ -1,0 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #d4a59a 0%, #c8b8a8 50%, #9ca8b8 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    gap: 40px;
+    max-width: 1400px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    width: 420px;
+    min-height: 650px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 50px 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-content {
+    position: relative;
+    z-index: 10;
+}
+
+/* Icon Circle - Login Card */
+.icon-circle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.planet-icon {
+    width: 120px;
+    height: 120px;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.planet-surface {
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to bottom, rgba(139, 119, 101, 0.8), rgba(139, 119, 101, 0.6));
+    position: absolute;
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+}
+
+/* Form Header */
+.form-header {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.label {
+    font-size: 12px;
+    text-transform: lowercase;
+    opacity: 0.7;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 300;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+}
+
+.subtitle, .temperature {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 4px;
+}
+
+/* Signup Card Header */
+.header-with-orb {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.booked-title {
+    font-size: 48px;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.glow-orb {
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, rgba(255, 182, 193, 0.8), rgba(255, 192, 203, 0.4));
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    filter: blur(10px);
+    animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.1); opacity: 1; }
+}
+
+.welcome-text {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* Auth Form Styles */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-input {
+    width: 100%;
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    font-size: 15px;
+    color: #333;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.form-input::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.form-input:focus {
+    background: rgba(255, 255, 255, 1);
+    border-color: rgba(139, 119, 101, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+
+.link {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.link:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.primary-button {
+    width: 100%;
+    padding: 16px;
+    background: rgba(20, 20, 20, 0.9);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.primary-button:hover {
+    background: rgba(20, 20, 20, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.primary-button:active {
+    transform: translateY(0);
+}
+
+.button-icon {
+    font-size: 18px;
+}
+
+.form-footer {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+/* Preference Section */
+.preference-section {
+    margin: 10px 0;
+}
+
+.preference-label {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.chip-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.chip {
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.chip:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.chip.active {
+    background: rgba(20, 20, 20, 0.8);
+    border-color: rgba(20, 20, 20, 0.8);
+}
+
+/* Info Box */
+.info-box {
+    background: rgba(20, 20, 20, 0.7);
+    border-radius: 18px;
+    padding: 18px;
+    margin: 15px 0;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.info-icon {
+    font-size: 28px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.info-content {
+    flex: 1;
+}
+
+.info-title {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.info-description {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Scene Decorations */
+.scene-decoration {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.sphere {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(200, 200, 200, 0.6), rgba(100, 100, 100, 0.4));
+    box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.sphere-1 {
+    width: 60px;
+    height: 60px;
+    bottom: 120px;
+    left: 30px;
+}
+
+.sphere-2 {
+    width: 50px;
+    height: 50px;
+    bottom: 140px;
+    left: 90px;
+}
+
+.sphere-3 {
+    width: 55px;
+    height: 55px;
+    bottom: 100px;
+    right: 40px;
+}
+
+.sphere-4 {
+    width: 45px;
+    height: 45px;
+    bottom: 130px;
+    right: 100px;
+}
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 182, 193, 0.6), rgba(255, 192, 203, 0.3));
+    filter: blur(8px);
+}
+
+.orb-1 {
+    width: 100px;
+    height: 100px;
+    bottom: 80px;
+    right: 60px;
+}
+
+.orb-2 {
+    width: 60px;
+    height: 60px;
+    bottom: 50px;
+    left: 50%;
+}
+
+.grass {
+    position: absolute;
+    bottom: 30px;
+    width: 40px;
+    height: 60px;
+    background: linear-gradient(to top, rgba(150, 140, 120, 0.4), transparent);
+    border-radius: 50% 50% 0 0;
+}
+
+.grass-1 {
+    left: 60px;
+}
+
+.grass-2 {
+    right: 80px;
+}
+
+.grass-3 {
+    left: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        gap: 30px;
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .title {
+        font-size: 40px;
+    }
+    
+    .booked-title {
+        font-size: 40px;
+    }
+}
