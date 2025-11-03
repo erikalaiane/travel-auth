@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Travel - Login & Signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Card - Login -->
+        <div class="card login-card">
+            <div class="card-content">
+                <div class="icon-circle">
+                    <div class="planet-icon">
+                        <div class="planet-surface"></div>
+                    </div>
+                </div>
+                
+                <div class="form-header">
+                    <p class="label">destination</p>
+                    <h1 class="title">Moon</h1>
+                    <p class="subtitle">22-31 July</p>
+                    <p class="temperature">Moonish 988C</p>
+                </div>
+
+                <form class="auth-form" id="loginForm">
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required class="form-input">
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="password" placeholder="Password" required class="form-input">
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox">
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" class="link">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="primary-button">
+                        <span class="button-icon">🚀</span>
+                        Login
+                    </button>
+
+                    <p class="form-footer">
+                        Don't have an account? <a href="#" class="link" id="showSignup">Sign up</a>
+                    </p>
+                </form>
+            </div>
+            
+            <div class="scene-decoration">
+                <div class="sphere sphere-1"></div>
+                <div class="sphere sphere-2"></div>
+                <div class="orb orb-1"></div>
+                <div class="orb orb-2"></div>
+                <div class="grass grass-1"></div>
+                <div class="grass grass-2"></div>
+            </div>
+        </div>
+
+        <!-- Right Card - Signup -->
+        <div class="card signup-card">
+            <div class="card-content">
+                <div class="header-with-orb">
+                    <h2 class="booked-title">Sign Up</h2>
+                    <div class="glow-orb"></div>
+                </div>
+
+                <p class="welcome-text">Join us on this cosmic journey</p>
+
+                <form class="auth-form" id="signupForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Full Name" required class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required class="form-input">
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="password" placeholder="Password" required class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" placeholder="Confirm Password" required class="form-input">
+                    </div>
+
+                    <div class="preference-section">
+                        <p class="preference-label">Travel Preference</p>
+                        <div class="chip-group">
+                            <button type="button" class="chip active" data-preference="economy">Economy</button>
+                            <button type="button" class="chip" data-preference="premium">Premium</button>
+                            <button type="button" class="chip" data-preference="luxury">Luxury</button>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="info-icon">🛸</div>
+                        <div class="info-content">
+                            <h3 class="info-title">Welcome Package</h3>
+                            <p class="info-description">Get a free cosmic welcome kit with your first booking to the Moon or Mars!</p>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="primary-button">
+                        <span class="button-icon">✨</span>
+                        Create Account
+                    </button>
+
+                    <p class="form-footer">
+                        Already have an account? <a href="#" class="link" id="showLogin">Login</a>
+                    </p>
+                </form>
+            </div>
+
+            <div class="scene-decoration">
+                <div class="sphere sphere-3"></div>
+                <div class="sphere sphere-4"></div>
+                <div class="grass grass-3"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
